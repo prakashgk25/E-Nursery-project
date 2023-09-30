@@ -26,23 +26,20 @@ export class LoginComponent implements OnInit {
 
         const role = response.user.role[0].roleName;
         if (role === 'Admin') {
-          
           this.router.navigate(['/admin']);
-          alert('Admin Logged in Successully');
 
         } else {
           this.router.navigate(['/user']);
-          alert('User Logged in Successfully');
         }
       },
       (error) => {
+        alert('Login credentials are invaild');
         console.log(error);
       }
     );
   }
 
   registerUser() {
-    
     this.router.navigate(['/register']);
   }
 }

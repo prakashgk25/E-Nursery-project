@@ -13,13 +13,14 @@ export class UserComponent implements OnInit {
 
   ngOnInit(): void {
     this.forUser();
-  }
+    }
 
   forUser() {
     this.userService.forUser().subscribe(
       (response) => {
         console.log(response);
         this.message = response;
+        alert('User Logged in Successfully');
       }, 
       (error)=>{
         console.log(error);
