@@ -1,0 +1,9 @@
+body{
+    background-image: url('/assets/login.jpg');
+    background-size: cover;    
+    background-repeat: no-repeat;
+}
+div{
+    padding-left: 15%;
+    padding-top: 5%;
+}

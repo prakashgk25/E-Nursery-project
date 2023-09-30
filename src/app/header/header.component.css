@@ -1,0 +1,28 @@
+.space-buttons {
+    flex: 1 1  auto;
+}
+
+.Appname
+{
+    font-family: cursive;
+    font-size: xx-large;
+    align-items: center;
+    color: green;
+}
+
+.mat-toolbar.mat-primary {
+    background: white;
+    color: white;
+  }
+
+button
+{
+    margin-right: 10px;
+
+}
+
+mat-raised-button
+{
+    text-align: right;
+
+}

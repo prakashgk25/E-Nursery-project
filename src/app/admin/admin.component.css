@@ -1,0 +1,12 @@
+body{
+    background-image: url('/assets/ss6.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+p{
+    text-align:left;
+    color:whitesmoke;
+    padding-top: 5%;
+    padding-left: 5%;
+    font-size:xx-large;
+}

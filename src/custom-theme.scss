@@ -1,0 +1,23 @@
+
+
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+
+$e-Nursery-Angular-primary: mat-palette($mat-indigo);
+$e-Nursery-Angular-accent: mat-palette($mat-pink, A200, A100, A400);
+
+$e-Nursery-Angular-warn: mat-palette($mat-red);
+
+$e-Nursery-Angular-theme: mat-light-theme((
+  color: (
+    primary: $e-Nursery-Angular-primary,
+    accent: $e-Nursery-Angular-accent,
+    warn: $e-Nursery-Angular-warn,
+  )
+));
+
+
+@include angular-material-theme($e-Nursery-Angular-theme);
+

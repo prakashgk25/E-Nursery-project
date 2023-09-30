@@ -1,0 +1,22 @@
+body{
+    background-image: url('/assets/wel.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+p{
+    text-align:center;
+    color:whitesmoke;
+    padding-left: 5%;
+    font-size:xx-large;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h1{
+    text-align: center;
+    padding-left: 10%;
+    padding-top: 25%;
+    color:whitesmoke;
+    font-size:80px;
+    font-style:italic;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

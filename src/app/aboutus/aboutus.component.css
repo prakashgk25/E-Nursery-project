@@ -1,0 +1,45 @@
+body{
+    background-image: url('/assets/wall.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h2{
+    text-align: left;
+    font-size: 30px;
+    margin-top: 3%;
+    padding-left: 2%;
+}
+p{
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 20px;
+    font-family:cursive;
+}
+.socialIcons{
+    padding-left: 50%;
+    padding-top: 10%;
+    
+}
+.socialIcons a{
+    text-decoration: none;
+    padding: 10px;
+    font-size: larger;
+    margin: 10px;
+    border-radius: 50%;
+}
+.socialIcons a i{
+    font-size: 2em;
+    padding-bottom: 1%;
+    color: black;
+    opacity: 0.9;
+}
+.Copyright{
+    display: flex;
+    justify-content:center;
+    padding-left: 30%;
+}
+.designer{
+    padding-left: 1%;
+    font-size:medium;
+    font-style: oblique;
+}
