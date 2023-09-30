@@ -3,51 +3,50 @@
         <div class="container mt-5">
             <div class="card" style="padding: 5px; text-align: center;">
                 <form #registerForm="ngForm" (ngSubmit)="register(registerForm)">
-                    <mat-form-field appearance="outline" class="w-30">
+                    <mat-form-field appearance="outline" class="w-50">
                         <mat-label>Username</mat-label>
-                        <input matInput
+                        <input matInput required #username="ngModel"
                                ngModel
                                name="userName"
                                id="userName"
                                placeholder="Username">
-                        <mat-hint>Username</mat-hint>
                     </mat-form-field>
+                    <br><span *ngIf="username.invalid && username.touched" style="color: red;">Please Enter  Username</span>
                     <br>
-                    <mat-form-field appearance="outline" class="w-30">
+                    <mat-form-field appearance="outline" class="w-50">
                         <mat-label>Firstname</mat-label>
-                        <input matInput
+                        <input matInput required #firstname="ngModel"
                                ngModel
                                name="userFirstName"
                                id="userFirstName"
                                placeholder="Firstname">
-                        <mat-hint>Firstname</mat-hint>
                     </mat-form-field>
-                    <br>
-        
-                    <mat-form-field appearance="outline" class="w-30">
+                    <br><span *ngIf="firstname.invalid && firstname.touched" style="color: red;">Please Enter  FirstName</span>
+                    <br>        
+                    <mat-form-field appearance="outline" class="w-50">
                         <mat-label>Lastname</mat-label>
-                        <input matInput
+                        <input matInput required #lastname="ngModel"
                                ngModel
                                name="userLastName"
                                id="userLastName"
                                placeholder="Lastname">
-                        <mat-hint>Lastname</mat-hint>
                     </mat-form-field>
+                    <br><span *ngIf="lastname.invalid && lastname.touched" style="color: red;">Please Enter  Lastname</span>
                     <br>
         
-                    <mat-form-field appearance="outline" class="w-30">
+                    <mat-form-field appearance="outline" class="w-50">
                         <mat-label>Password</mat-label>
-                        <input matInput
+                        <input matInput required #password="ngModel"
                                ngModel
                                name="userPassword"
                                id="userPassword"
                                placeholder="Password">
-                        <mat-hint>Password</mat-hint>
                     </mat-form-field>
+                    <br><div *ngIf="password.invalid && password.touched" style="color: red;">Please Enter  Password</div>
                     <br>
         
                     <div class="text-center">
-                        <button type="submit" mat-raised-button color="primary">Register</button>
+                        <button type="submit" mat-raised-button color="primary" [disabled]="registerForm.invalid">Register</button>
                     </div>
                     
                 </form>

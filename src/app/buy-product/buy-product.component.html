@@ -1,4 +1,5 @@
-<div class="container mt-5">
+
+    <div class="container mt-5" >
     <div class="card p-3">
         <div class="row">
             <div class="col-6">
@@ -9,46 +10,52 @@
                     <mat-form-field appearance="outline"
                                     class="w-100">
                         <mat-label>Full name</mat-label>
-                        <input matInput
-                               placeholder="Full name"
+                        <input matInput required #fullName="ngModel"
+                               placeholder="Full name" 
                                [(ngModel)]="orderDetails.fullName"
                                name="fullName">
                     </mat-form-field>
-
+                    <br><span *ngIf="fullName.invalid && fullName.touched" style="color: red;">Please enter fullname</span>
+                    <br>
                     <mat-form-field appearance="outline"
                                     class="w-100">
                         <mat-label>Full address</mat-label>
-                        <input matInput
+                        <input matInput required #fullAddress="ngModel"
                                placeholder="Full address"
                                [(ngModel)]="orderDetails.fullAddress"
                                name="fullAddress">
                     </mat-form-field>
-
+                    <br><span *ngIf="fullAddress.invalid && fullAddress.touched" style="color: red;">Please enter fulladdress</span>
+                    <br>
                     <mat-form-field appearance="outline"
                                     class="w-100">
                         <mat-label>Contact number</mat-label>
-                        <input matInput
+                        <input matInput pattern="^((\\+91-?)|0)?[0-9]{10}$" required minlength="10" maxlength="10"
+                        #contact="ngModel"
                                placeholder="Contact number"
                                [(ngModel)]="orderDetails.contactNumber"
                                name="contactNumber">
                     </mat-form-field>
-
+                    <br><span *ngIf="contact.invalid && contact.touched" style="color: red;">Please enter contact number</span>
+                    <br>
                     <mat-form-field appearance="outline"
                                     class="w-100">
                         <mat-label>Alternate contact number</mat-label>
-                        <input matInput
+                        <input matInput pattern="^((\\+91-?)|0)?[0-9]{10}$" minlength="10" maxlength="10"
+                        #contact="ngModel"
                                placeholder="Alternate contact number"
                                [(ngModel)]="orderDetails.alternateContactNumber"
                                name="alternateContactNumber">
                     </mat-form-field>
-
+                    <br><span *ngIf="contact.invalid && contact.touched" style="color: red;">Please enter alternate number</span>
+                    <br>
                     <div align="right">
-                        <button type="submit" mat-stroked-button color="primary">Place Order</button>
+                        <button [disabled]="orderForm.invalid" type="submit" mat-raised-button color="primary"  >Place Order</button>
                     </div>
                 </form>
 
             </div>
-            <div class="col-6">
+            <div class="col-6 ">
                 <table class="table">
                     <thead class="thead">
                         <tr>

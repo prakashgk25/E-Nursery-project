@@ -1,0 +1,12 @@
+img{
+    margin: 15px;
+    border-radius: 50%;
+}
+.bgimg,body{
+    background-image: url('/assets/leaf1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: rgb(224, 220, 245);
+}
