@@ -20,6 +20,9 @@ export class CartComponent implements OnInit {
     this.getCartDetails();
   }
 
+
+  
+
   delete(cartId) {
     console.log(cartId);
     this.productService.deleteCartItem(cartId).subscribe(
